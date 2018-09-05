@@ -25,8 +25,9 @@ add_library("Datadog.Trace.ClrProfiler.Native" SHARED
 
 target_include_directories("Datadog.Trace.ClrProfiler.Native.static"
   PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../lib/coreclr/src/inc>
-  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../lib/coreclr/src/pal/prebuilt/inc>
+  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../lib/coreclr/src/pal/inc>
   PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../lib/coreclr/src/pal/inc/rt>
+  PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../lib/coreclr/src/pal/prebuilt/inc>
 )
 
 target_link_libraries("Datadog.Trace.ClrProfiler.Native" "Datadog.Trace.ClrProfiler.Native.static")

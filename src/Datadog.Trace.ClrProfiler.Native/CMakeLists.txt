@@ -3,13 +3,13 @@
 project("Datadog.Trace.ClrProfiler.Native" VERSION 0.2.0)
 
 add_library("Datadog.Trace.ClrProfiler.Native.static" STATIC
-  ClassFactory.cpp
+  class_factory.cpp
   clr_helpers.cpp
   cor_profiler_base.cpp
   cor_profiler.cpp
-  CSHolder.cpp
-  ILRewriter.cpp
-  ILRewriterWrapper.cpp
+  cs_holder.cpp
+  il_rewriter.cpp
+  il_rewriter_wrapper.cpp
   integration.cpp
   integration_loader.cpp
   Interop.cpp

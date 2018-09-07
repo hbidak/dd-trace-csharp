@@ -14,6 +14,10 @@ This repository contains what you need to trace .NET applications. Some quick no
 - Supports .NET Core 2.0 or newer
 - Multiple AppDomains are not supported
 
+## Instrumenting your application
+
+See our [documentation on .NET tracing](https://docs.datadoghq.com/tracing/setup/dotnet/) for setup instructions.
+
 ## Build Status
 
 OS|Features|Status
@@ -23,14 +27,9 @@ Linux|manual instrumentation (NuGet)|[![Build status](https://datadog-apm.visual
 
 ## The Components
 
+**[Datadog .NET Tracer](https://github.com/DataDog/dd-trace-csharp)**: an [OpenTracing](http://opentracing.io/)-compatible .NET library that lets you trace any piece of your .NET code. Available as a NuGet package for manual instrumentation or as an MSI Windows Installer for automatic instrumentation.
 
-**[Datadog Tracer](https://github.com/DataDog/dd-trace-csharp)**: an OpenTracing-compatible .NET library that lets you trace any piece of your .NET code.
-
-**[Datadog APM Agent](https://github.com/DataDog/datadog-trace-agent)**: a service that runs on your application servers, accepting trace data from the Datadog Tracer and sending it to Datadog. (The APM Agent is not part of this repo; it's the same Agent to which all Datadog tracers—Go, Python, etc—send data)
-
-## Getting Started
-
-Before instrumenting your code, [install the Datadog APM Agent](https://docs.datadoghq.com/tracing/setup/) on your application servers (or locally, if you're just trying out .NET APM).
+**[Datadog APM Agent](https://github.com/DataDog/datadog-trace-agent)**: a service that runs on your application servers, accepting trace data from the Datadog Tracer and sending it to Datadog. (The APM Agent is not part of this repo; it's the same Agent to which all Datadog tracers—Go, Python, etc—send data.)
 
 ## Development
 
